@@ -22,3 +22,4 @@ end
 
 gem 'devise', '~> 4.2'
 gem 'bower-rails'
+gem 'faker', '~> 1.6', '>= 1.6.6'
