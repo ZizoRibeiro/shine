@@ -15,6 +15,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do
