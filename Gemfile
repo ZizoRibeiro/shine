@@ -11,12 +11,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 
 
-
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'teaspoon-jasmine'
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -26,3 +27,4 @@ end
 gem 'devise', '~> 4.2'
 gem 'bower-rails'
 gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'puma'
