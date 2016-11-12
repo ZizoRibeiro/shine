@@ -105,4 +105,14 @@ describe("CustomerSearchController", function() {
     });
   });
 
+  describe("Fetching Search Results", function() {
+    beforeEach(module("customers"));
+
+    beforeEach(function(){
+      httpBackend.when('GET', "/customers.json?keywords=bob&page=0").
+                  respond(serverResults);
+    });
+  });
+  
+
 });
