@@ -12,13 +12,16 @@ app.config ([
           $routeProvider.when("/", {
             controller: "CustomerSearchController",
             templateUrl: "customer_search.html"
+          })when("/:id" ,{
+            controller: "CustomerDetailController",
+            templateUrl: "customer_search.html"
           });
         }
   ]);
 
 app.controller("CustomerSearchController", [ 
-          '$scope','$http',
-  function($scope , $http) {                         
+          '$scope','$http', '$location',
+  function($scope , $http, $location) {                         
 
     var page = 0;
 
@@ -50,6 +53,10 @@ app.controller("CustomerSearchController", [
     $scope.nextPage = function() {
       page = page + 1;
       $scope.search($scope.keywords);
+    }
+
+    $scope.viewDetails = function(customer) {
+      $location.path("/" + customer.id);
     }
   }
 ]);
