@@ -28,3 +28,5 @@ gem 'devise', '~> 4.2'
 gem 'bower-rails'
 gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'puma'
+gem 'angular-rails-templates'
+gem 'sprockets', "~> 2.0"
