@@ -47,7 +47,6 @@ describe("CustomerSearchController", function() {
 
     beforeEach(module("customers"));
 
-
     beforeEach(inject(function ($controller, $rootScope, $httpBackend) {
       scope       = $rootScope.$new();
       httpBackend = $httpBackend;
@@ -61,9 +60,6 @@ describe("CustomerSearchController", function() {
                   respond(serverResults);
     });
 
-
-    
-    // previous setup code
 
     it("populates the customer list with the results", function() {
       scope.search("bob");
@@ -104,15 +100,5 @@ describe("CustomerSearchController", function() {
         "There was a problem: 500");
     });
   });
-
-  describe("Fetching Search Results", function() {
-    beforeEach(module("customers"));
-
-    beforeEach(function(){
-      httpBackend.when('GET', "/customers.json?keywords=bob&page=0").
-                  respond(serverResults);
-    });
-  });
-  
 
 });
